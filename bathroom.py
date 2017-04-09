@@ -29,7 +29,8 @@ def Rs(stalls, index):
 def choose(stalls, N):
     empty_stall_indices = [i for i in xrange(N) if stalls[i] == 0]
 
-    t = []
+    max_cost = MIN_INT
+    max_cost_index = -1
     for i in empty_stall_indices:
         ls = Ls(stalls, i)
         rs = Rs(stalls, i)
